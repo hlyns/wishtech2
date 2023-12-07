@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Checkout</title>
+    
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 30px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        table {
+            width: 30%;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-spacing: 0;
+            margin-top: 0px;
+        }
+
+        .main-content {
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .right-sidebar {
+            width: 25%;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color:seagreen;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .payment-method {
+            display:inline-flex;
+            gap: 10px;
+            align-items:first baseline;
+            margin-bottom: 10px;
+        }
+
+        .payment-method img {
+            max-width: 30px;
+            max-height: 30px;
+        }
+
+        .order-summary {
+            margin-top: 20px;
+        }
+
+        .order-summary table {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            table,
+            .main-content,
+            .right-sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .product-container{
+            padding-left: 20px;
+            padding-top: 10px;
+        }.checkout-btn a {
+    border: 2px solid #28a745; /* Default border color */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    padding: 5px 10px; /* Optional: Adjust padding for better appearance */
+    transition: border-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.checkout-btn a:hover {
+    border-color: #218838; /* Hover border color */
+    color:goldenrod; /* Hover text color */
+}
+
+.checkout-btn a {
+   
+    color:#218838;
+    text-decoration: none;
+
+}
+        
+    </style>
+</head>
+
+<body>
+   
+<div class="product-container">
+    <div class="product-image">
+        <img src="./IMAGES/TECHNO CAMON PRO 6500.jpg" alt="Product Image">
+    </div>
+
+    <div class="product-details">
+        <h2>Techno Camon 20 Pro</h2>
+        <p><strong>location:</strong>Sariaya</p>
+        
+        <p><strong>Description:</strong></p><p>128GB storage,   Blue color,   Used once or twice,   As good as new.</p>
+        <p><strong>Price: </strong>₱6500</p>
+        <p class="offer"><strong>Made offer: </strong>₱6,000</p>
+        <p><strong>Inclusions</strong></p>
+        <p>Box, Manual, Earphones, and Type-C Charger</p>
+        <div class="shipping-option">
+         
+            <p><strong>Received :</strong>by 3-5 business days</p>
+        </div>
+    </div>
+</div>
+    <div class="main-content">
+        <h2>DELIVERY ADDRESS</h2>
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="province">State/Province</label>
+            <input type="text" id="province" name="province" required>
+
+            <label for="barangay">Barangay</label>
+            <input type="text" id="barangay" name="barangay" required>
+
+            <label for="city">City/Municipality</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="zip">Post/Zip Code</label>
+            <input type="text" id="zip" name="zip" required>
+
+            <label for="address">Address Line 1</label>
+            <input type="text" id="address" name="address" required>
+
+            <button>SAVE</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="right-sidebar">
+        <h2>SELECT YOUR DEAL OPTION</h2>
+    
+        <div class="payment-method">
+            <input type="checkbox" id="meetupCheckbox" name="dealOption" value="meetup">
+            <label for="meetupCheckbox">
+                <span>Meet-up</span>
+            </label>
+        </div>
+    
+        <div class="payment-method">
+            <input type="checkbox" id="deliveryCheckbox" name="dealOption" value="delivery">
+            <label for="deliveryCheckbox">
+                <span>Delivery</span>
+            </label>
+        </div>
+  
+        <h2>SELECT YOUR PAYMENT METHOD</h2>
+        <div class="payment-method">
+            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cash" checked>
+            <label for="cashOnDelivery">
+                <img src="./IMAGES//bopis.png" alt="Cash on Delivery">
+                <span>Bopis</span>
+            </label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cash" checked>
+            <label for="cashOnDelivery">
+                <img src="./IMAGES//cod.png" alt="Cash on Delivery">
+                <span>COD</span>
+            </label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cash" checked>
+            <label for="cashOnDelivery">
+                <img src="./IMAGES//paymaya.png" alt="Cash on Delivery">
+                <span>Paymaya</span>
+            </label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cash" checked>
+            <label for="cashOnDelivery">
+                <img src="./IMAGES/gcash.png" alt="Cash on Delivery">
+                <span>Gcash</span>
+            </label>
+        </div>
+        
+    <div class="order-summary">
+        <h2>ORDER SUMMARY</h2>
+        <table>
+            <tr>
+                <td>Techno camon 20 pro 128GB</td>
+                <td>₱15,000</td>
+            </tr>
+            <tr>
+                <td>Subtotal:</td>
+                <td>₱6,000</td>
+            </tr>
+            <tr>
+                <td>Shipping Total:</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td>ORDER TOTAL</td>
+                <td>₱6,000</td>
+            </tr>
+        </table>
+        <div class="checkout-btn">
+    <a href="notif.html" class="btn btn-outline-success btn-sm">Checkout</a>
+</div>
+
+</body>
+
+</html>
